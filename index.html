@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Toast-Message</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="toast">
+    </div>
+
+    <div class="btnPosition">
+        <div onclick="showSuccessToast()" class="btn btn--success">Show success</div>
+        <div onclick="showErrorToast()" class="btn btn--danger">Show error</div>
+    </div>
+
+    <script src="./index.js"></script>
+
+    <script>
+
+        function showSuccessToast() {
+            toast({
+                title: 'Success!',
+                message: 'Các bạn đã đăng ký thành công tài khoản',
+                type: 'success',
+                duration: 5000
+            })
+        }
+
+        function showErrorToast() {
+            toast({
+                title: 'Error!',
+                message: 'Có lỗi xảy ra, vui lòng liên hệ quản trị viên',
+                type: 'error',
+                duration: 5000
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>
